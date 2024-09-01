@@ -29,25 +29,30 @@ def CalculateAreaOfRectangle():
         print("Please enter valid numeric values for length and width.")
 
 
+# Q3: Write a program that calculates the area of a circle.
+def CalCircleArea():
+    try:
+        pie = 3.14
+        radius = float(input("Enter the radius of the circle: "))
+        if radius < 0:
+            print("Radius cannot be negative.")
+        else:
+            area_of_circle = pie * (radius**2)
+            print(
+                f"Pie = {pie}, Radius = {radius}\nArea of Circle = {area_of_circle:.2f}"
+            )
+    except ValueError:
+        print("Please enter a valid number for the radius.")
+
+
 print("Task 1: Calculate age")
 CalculateAge()
 
-print("\nTask 2: Calculate the area of a rectangle")
+print("Task 2: Calculate the area of a rectangle")
 CalculateAreaOfRectangle()
 
-# # Q3: Write a program that calculates the area of a circle.
-# try:
-#     pie = 3.14
-#     radius = float(
-#         input("\nTask3: Area of the circle.\nEnter the radius of the circle: ")
-#     )
-#     if radius < 0:
-#         print("Radius cannot be negative.")
-#     else:
-#         area_of_circle = pie * (radius**2)
-#         print(f"Pie = {pie}, Radius = {radius}\nArea of Circle = {area_of_circle:.2f}")
-# except ValueError:
-#     print("Please enter a valid number for the radius.")
+print("Task3: Area of the circle.")
+CalCircleArea()
 
 # # Q4: Write a program that calculates the area of the cube
 # try:
