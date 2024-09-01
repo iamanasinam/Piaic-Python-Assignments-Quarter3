@@ -14,39 +14,26 @@ def CalculateAge():
         print("Please enter a valid year (numeric value).")
 
 
+# Task 2: Write a program that calculates the area of a rectangle using length and width variables.
+def CalculateAreaOfRectangle():
+    try:
+        length = float(input("Enter length: "))
+        width = float(input("Enter width: "))
+
+        if length <= 0 or width <= 0:
+            print("Length and width must be positive numbers.")
+        else:
+            area_of_rectangle = length * width
+            print(f"The area of the rectangle is {area_of_rectangle} square units.")
+    except ValueError:
+        print("Please enter valid numeric values for length and width.")
+
+
 print("Task 1: Calculate age")
 CalculateAge()
 
-
-#
-# current_year = 2024
-
-# try:
-#     birth_year = int(input("Enter your birth year: "))
-#     if birth_year > current_year:
-#         print("Birth year cannot be in the future.")
-#     elif birth_year < 1900:
-#         print("Birth year seems too far in the past. Please enter a valid year.")
-#     else:
-#         age = current_year - birth_year
-#         print(f"You are {age} years old.")
-# except ValueError:
-#     print("Please enter a valid year (numeric value).")
-
-# # Task 2: Write a program that calculates the area of a rectangle using length and width variables.
-# print("\nTask 2: Calculate the area of a rectangle")
-
-# try:
-#     length = float(input("Enter length: "))
-#     width = float(input("Enter width: "))
-
-#     if length <= 0 or width <= 0:
-#         print("Length and width must be positive numbers.")
-#     else:
-#         area_of_rectangle = length * width
-#         print(f"The area of the rectangle is {area_of_rectangle} square units.")
-# except ValueError:
-#     print("Please enter valid numeric values for length and width.")
+print("\nTask 2: Calculate the area of a rectangle")
+CalculateAreaOfRectangle()
 
 # # Q3: Write a program that calculates the area of a circle.
 # try:
