@@ -45,6 +45,70 @@ def CalCircleArea():
         print("Please enter a valid number for the radius.")
 
 
+# Q4: Write a program that calculates the area of the cube
+def CalCubeArea():
+    try:
+        s = float(input("Enter the side length of the cube: "))
+        if s < 0:
+            print("Side length cannot be negative.")
+        else:
+            area_of_cube = 6 * (s**2)
+            print(f"S = {s}\nArea of Cube = 6 x {s}^2 = {area_of_cube:.2f}")
+    except ValueError:
+        print("Please enter a valid number for the side length.")
+
+
+# Q5: Create a program that converts a temperature from Fahrenheit to Celsius and vice versa using a variable.
+def TempConverter():
+    try:
+        temperature_in_fahrenheit = float(
+            input("Enter the temperature in Fahrenheit: ")
+        )
+        temperature_in_celsius = (temperature_in_fahrenheit - 32) * 5 / 9
+        print(
+            f"{temperature_in_fahrenheit} degrees Fahrenheit is equal to {temperature_in_celsius:.2f} degrees Celsius."
+        )
+        print(
+            f"{temperature_in_celsius:.2f} degrees Celsius is equal to {(temperature_in_celsius * 9 / 5 + 32):.2f} degrees Fahrenheit."
+        )
+    except ValueError:
+        print("Please enter a valid number for the temperature.")
+
+
+# Q6: Convert a given number of seconds into minutes and seconds using variables.
+def SecToMin():
+    try:
+        seconds = int(input("Enter the number of seconds: "))
+        if seconds < 0:
+            print("Seconds cannot be negative.")
+        else:
+            minutes = seconds // 60
+            remaining_seconds = seconds % 60
+            print(
+                f"{seconds} Seconds, Equal to {minutes} Minutes, and {remaining_seconds} Seconds."
+            )
+    except ValueError:
+        print("Please enter a valid integer for the seconds.")
+
+
+# Q7: Write a program that calculates the percentage.
+def CalPercentage():
+    try:
+        total_marks = float(input("Enter the total marks: "))
+        obtained_marks = float(input("Enter the obtained marks: "))
+        if total_marks <= 0:
+            print("Total marks must be greater than zero.")
+        elif obtained_marks < 0 or obtained_marks > total_marks:
+            print("Obtained marks must be between 0 and the total marks.")
+        else:
+            percentage = (obtained_marks / total_marks) * 100
+            print(
+                f"Obtained Marks = {obtained_marks}, Total Marks = {total_marks}\nPercentage = {percentage:.2f}%"
+            )
+    except ValueError:
+        print("Please enter valid numbers for the marks.")
+
+
 print("Task 1: Calculate age")
 CalculateAge()
 
@@ -54,64 +118,14 @@ CalculateAreaOfRectangle()
 print("Task3: Area of the circle.")
 CalCircleArea()
 
-# # Q4: Write a program that calculates the area of the cube
-# try:
-#     s = float(input("\nTask4: Area of the cube.\nEnter the side length of the cube: "))
-#     if s < 0:
-#         print("Side length cannot be negative.")
-#     else:
-#         area_of_cube = 6 * (s**2)
-#         print(f"S = {s}\nArea of Cube = 6 x {s}^2 = {area_of_cube:.2f}")
-# except ValueError:
-#     print("Please enter a valid number for the side length.")
+print("Task4: Area of the cube.")
+CalCubeArea()
 
-# # Q5: Create a program that converts a temperature from Fahrenheit to Celsius and vice versa using a variable.
-# try:
-#     temperature_in_fahrenheit = float(
-#         input(
-#             "\nTask5: Temperature from Fahrenheit to Celsius and Vice versa\nEnter the temperature in Fahrenheit: "
-#         )
-#     )
-#     temperature_in_celsius = (temperature_in_fahrenheit - 32) * 5 / 9
-#     print(
-#         f"{temperature_in_fahrenheit} degrees Fahrenheit is equal to {temperature_in_celsius:.2f} degrees Celsius."
-#     )
-#     print(
-#         f"{temperature_in_celsius:.2f} degrees Celsius is equal to {(temperature_in_celsius * 9 / 5 + 32):.2f} degrees Fahrenheit."
-#     )
-# except ValueError:
-#     print("Please enter a valid number for the temperature.")
+print("Task5: Temperature from Fahrenheit to Celsius and Vice versa")
+TempConverter()
 
-# # Q6: Convert a given number of seconds into minutes and seconds using variables.
-# try:
-#     seconds = int(
-#         input("\nTask6: Converting Sec into Min/Sec\nEnter the number of seconds: ")
-#     )
-#     if seconds < 0:
-#         print("Seconds cannot be negative.")
-#     else:
-#         minutes = seconds // 60
-#         remaining_seconds = seconds % 60
-#         print(
-#             f"{seconds} Seconds, Equal to {minutes} Minutes, and {remaining_seconds} Seconds."
-#         )
-# except ValueError:
-#     print("Please enter a valid integer for the seconds.")
+print("Task6: Temperature from Celsius to Fahrenheit")
+SecToMin()
 
-# # Q7: Write a program that calculates the percentage.
-# try:
-#     total_marks = float(
-#         input("\nTask7: Calculating the percentage\nEnter the total marks: ")
-#     )
-#     obtained_marks = float(input("Enter the obtained marks: "))
-#     if total_marks <= 0:
-#         print("Total marks must be greater than zero.")
-#     elif obtained_marks < 0 or obtained_marks > total_marks:
-#         print("Obtained marks must be between 0 and the total marks.")
-#     else:
-#         percentage = (obtained_marks / total_marks) * 100
-#         print(
-#             f"Obtained Marks = {obtained_marks}, Total Marks = {total_marks}\nPercentage = {percentage:.2f}%"
-#         )
-# except ValueError:
-#     print("Please enter valid numbers for the marks.")
+print("Task7: Calculating the percentage")
+CalPercentage
